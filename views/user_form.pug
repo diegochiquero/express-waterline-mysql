@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='name') name:
+      input#name.form-control(type='text', placeholder='Michael' name='name' required='true' value=(undefined===users ? '' : users.name) )
+      label(for='surname') surname:
+      input#surname.form-control(type='text', placeholder='Jackson' name='surname' required='true' value=(undefined===users ? '' : users.surname))
+    button.btn.btn-primary(type='submit') Create
+  if result 
+    ul
+      for error in result
+        li!= error.msg
+
+  br  

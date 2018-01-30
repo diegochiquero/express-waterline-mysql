@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+
+  ul  
+  each user in user_list  
+    li 
+      |  #{user.name}
+      |  #{user.surname}
+      a(href='/users/delete/'+user.id)   Delete
+        a(href='/users/update/'+user.id)  Update 
+
+  else
+    li There are no users.

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST' action='')
+    div.form-group
+      input#userid.form-control(type='hidden', name='userid' required='true' value=user_update.id )
+      label(for='name') name:
+      input#name.form-control(type='text', name='name' required='true' value=user_update.name)
+      label(for='surname') surname:
+      input#surname.form-control(type='text', name='surname' required='true' value= user_update.surname)
+    button.btn.btn-primary(type='submit') Update
+  if result 
+    ul
+      for error in result
+        li!= error.msg

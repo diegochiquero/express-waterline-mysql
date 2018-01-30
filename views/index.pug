@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to basic example of WaterLine ORM  + Express.js for MySQL
+
+  if user_count== 0
+    li There aren't any users
+    
+  else 
+    li #[Strong Total users:] !{user_count}
