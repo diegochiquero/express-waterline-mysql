@@ -2,6 +2,12 @@
 
 Basic example of Express.js + WaterLine ORM for MySQL
 
+#### Prerequisites
+
+- Node 6.13
+- Express 4.15.2
+- WaterLine 0.11.11
+
 #### How do I start?
 
 1. Clone this repository
